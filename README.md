@@ -26,6 +26,14 @@ Players can only lead flocks in Adventure mode; in Creative the NPC accepts but 
 2. In game: `/npc spawn Kweebec_Merchant`, look at it, `/lowtalk tag companion`, `/gamemode adventure`.
 3. Talk to it and choose "Come with me".
 
+## Removing the mod
+
+Run `/companions dismissall` first (permission `companions.admin`). It releases every companion in every loaded
+world: leaves the flock, restores the original role, forgets the companion state. An NPC still in the
+`Companion_Follower` role when the mod is gone is not a crash, but the NPC plugin cannot rebuild a role it has never
+heard of and the NPC is lost. Everything else Companions touches is the game's own (flock membership, roles you
+already had) or lives in LowTalk's data files.
+
 ## Why this exists
 
 Companions is the first mod written against LowTalk's public API (`com.chromecide.lowtalk.api`). Everything it

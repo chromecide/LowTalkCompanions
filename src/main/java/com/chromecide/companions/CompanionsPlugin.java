@@ -36,6 +36,7 @@ public class CompanionsPlugin extends JavaPlugin {
         api.registerFunction("waiting", "waiting()", "True while this NPC is the player's companion but waiting.", companions::waiting);
         api.registerFunction("is_companion", "is_companion()", "True if this NPC is the player's companion, following or waiting.", companions::isCompanion);
         api.addListener(companions);
+        getCommandRegistry().registerCommand(new CompanionsCommand(companions));
         getLogger().at(Level.INFO).log("Companions ready: <<follow>>, <<stay>>, <<dismiss>>, following(), waiting(), is_companion()");
     }
 }
