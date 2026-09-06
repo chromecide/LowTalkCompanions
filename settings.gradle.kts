@@ -14,3 +14,6 @@ plugins {
 }
 
 rootProject.name = "Companions"
+
+// Build LowTalk from the sibling checkout so both mods always match at source level.
+includeBuild("../lowtalk")
