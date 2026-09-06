@@ -1,0 +1,39 @@
+# Companions sample. Tag any NPC with /lowtalk tag companion while looking at it, then talk to it in Adventure mode.
+npc: @companion
+speaker: Companion
+title: Companion
+
+== start
+<<if following()>>
+  <<jump travelling>>
+<<elseif waiting()>>
+  <<jump waiting>>
+<<endif>>
+Need a hand out there? I can come along.
+-> Come with me.
+    <<follow>>
+    <<end>>
+-> Not right now.
+    <<end>>
+
+== travelling
+Where to next?
+-> Wait here for me.
+    <<stay>>
+    <<end>>
+-> You can go now. Thank you.
+    <<dismiss>>
+    <<end>>
+-> Nothing, carry on.
+    <<end>>
+
+== waiting
+Ready when you are.
+-> Follow me.
+    <<follow>>
+    <<end>>
+-> You can go now. Thank you.
+    <<dismiss>>
+    <<end>>
+-> Keep waiting.
+    <<end>>
