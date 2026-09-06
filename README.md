@@ -43,6 +43,12 @@ world: leaves the flock, restores the original role, forgets the companion state
 heard of and the NPC is lost. Everything else Companions touches is the game's own (flock membership, roles you
 already had) or lives in LowTalk's data files.
 
+## How this was built
+
+Like LowTalk, Companions was designed, directed and play-tested by one person and mostly written by an AI coding
+agent, Claude Code, under that direction. It contains no AI itself and makes no network calls. LowTalk's README
+says more under "How this was built".
+
 ## Why this exists
 
 Companions is the first mod written against LowTalk's public API (`com.chromecide.lowtalk.api`). Everything it
