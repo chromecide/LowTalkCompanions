@@ -24,7 +24,7 @@ Players can only lead flocks in Adventure mode; in Creative the NPC accepts but 
 
 | Companions | LowTalk | Hytale release line | Hytale pre-release line |
 |------------|---------|---------------------|-------------------------|
-| 0.1.0      | 0.1.1   | 0.6.3, 0.6.4        | 0.7.0-pre.2             |
+| 0.1.0      | 0.1.1   | 0.6.3 to 0.6.5      | 0.7.0-pre.2             |
 
 `./gradlew buildAll` writes one jar per line into `build/dist/`; LowTalk is built from the sibling checkout through
 a composite build, so the two always match at source level. Branching follows LowTalk's CONTRIBUTING notes.
