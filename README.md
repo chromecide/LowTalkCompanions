@@ -53,5 +53,6 @@ MIT licensed, like LowTalk.
 ## AI Use Disclosure
 
 Like LowTalk, Companions was designed, directed and play-tested by one person and mostly written by an AI coding
-agent, Claude Code, under that direction. It contains no AI itself and makes no network calls. LowTalk's README
-says more under "AI Use Disclosure".
+agent, Claude Code, under that direction. It contains no AI itself and makes no network calls. No generative AI
+is used for imagery, and contributions with AI-generated images are rejected. LowTalk's README says more under
+"AI Use Disclosure", and its CONTRIBUTING.md carries the rules.
