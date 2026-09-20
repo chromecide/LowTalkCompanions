@@ -24,12 +24,12 @@ Players can only lead flocks in Adventure mode; in Creative the NPC accepts but 
 
 | Companions | LowTalk | Hytale release line | Hytale pre-release line |
 |------------|---------|---------------------|-------------------------|
-| 0.1.0      | 0.4.0   | 0.6.3 to 0.6.8[^booted] | 0.7.0-pre.2 to 0.7.0-pre.3.1[^booted] |
+| 0.1.0      | 0.4.0   | 0.6.3 to 0.6.8[^played] | 0.7.0-pre.2 to 0.7.0-pre.3.1[^played] |
 
-[^booted]: The ranges are what each jar's manifest accepts. This build was booted on a plain server on
-    0.6.8 and on 0.7.0-pre.3.1, with the pack, the `Companion_Follower` role and the sample dialogue
-    loading clean on both. The last time a companion was actually recruited in game was on 0.6.5 and
-    0.7.0-pre.2 (2026-09-11).
+[^played]: The ranges are what each jar's manifest accepts. This build was booted from its jar on a plain
+    server and then played in game on both lines on 2026-09-20: 0.6.8 and 0.7.0-pre.3.1. Those two are
+    the newest builds either line has; the rest of each range is what the manifest allows, not what was
+    played.
 
 `./gradlew buildAll` writes one jar per line into `build/dist/`; LowTalk is built from the sibling checkout through
 a composite build, so the two always match at source level. Branching follows LowTalk's CONTRIBUTING notes.
