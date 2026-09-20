@@ -78,6 +78,17 @@ tasks.register<Exec>("buildPreRelease") {
         "-PjarDir=${distDir.get().asFile.absolutePath}"
     )
     doFirst { distDir.get().asFile.mkdirs() }
+    // -P properties propagate into the composite build, so LowTalk's jar task also honours -PjarDir and -Pversion
+    // and drops a copy of LowTalk into dist carrying *this* mod's version string. Nobody should ever ship that jar,
+    // so it does not get to sit next to the ones people do ship.
+    doLast {
+        distDir.get().asFile.listFiles()
+            ?.filter { it.isFile && it.name.endsWith(".jar") && !it.name.startsWith("Companions-") }
+            ?.forEach {
+                logger.lifecycle("Removing by-product of the composite build: ${it.name}")
+                it.delete()
+            }
+    }
 }
 
 tasks.register("buildAll") {
